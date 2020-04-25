@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { IEvents } from '../models';
+import { APPCONSTANTS } from '../app.constants';
 
 @Component({
     selector: 'app-event',
@@ -9,6 +10,7 @@ import { IEvents } from '../models';
 })
 export class EventComponent implements OnInit {
     public events: Array<IEvents> = [];
+    public path: string = APPCONSTANTS.PATH + 'b1.jpg';
     constructor(private eventService: EventService) { }
 
     ngOnInit() {

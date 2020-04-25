@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-4 event-item" *ngFor="let item of events">
             <mat-card class="example-card">
-                <img mat-card-image src="../../assets/img/b1.jpg" alt="Photo of a Shiba Inu" style="height: 210px;">
+                <img mat-card-image src={{path}} alt="Photo of a Shiba Inu" style="height: 210px;">
                 <mat-card-content class="content-card">
                     <h3>{{item.eventName}}</h3>
                     <p>{{item.eventDate}}</p>
