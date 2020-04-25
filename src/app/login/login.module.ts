@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login.component';
-import { MatSliderModule } from '@angular/material/slider';
+import { AppMatModule } from '../app-mat.module';
 
 @NgModule({
     declarations: [
@@ -10,7 +10,7 @@ import { MatSliderModule } from '@angular/material/slider';
     ],
     imports: [
         FormsModule,
-        MatSliderModule
+        AppMatModule
     ],
     providers: []
 })
