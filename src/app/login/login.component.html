@@ -1,3 +1,42 @@
 <div class="login-main">
-    <img mat-card-image src={{imgPath}} alt="Login">
+    <div class="login-mat-wrapper">
+        <mat-card class="login-card">
+            <mat-card-content class="content-card">
+                <h1 style="color: darkslategrey; font-family: Cambria;"> Artist Login</h1>
+                <br>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label class="content-card">Sign in with your email id</mat-label>
+                    <input style="border-bottom: 1px solid darkgray;" matInput>
+                    <mat-hint style="font-family: Cambria; color: darkgray;">example@domain.com</mat-hint>
+                </mat-form-field>
+                <br>
+                <mat-form-field style="width: 100%" appearance="fill">
+                    <mat-label class="content-card">Password</mat-label>
+                    <input style="border-bottom: 1px solid darkgray;" matInput>
+                    <mat-hint style="font-family: Cambria; color: darkgray;">Must be atleast 6 characters</mat-hint>
+                </mat-form-field>
+                <br>
+                <br>
+                <button mat-raised-button colour="primary" style="width: 100%; background-color: cadetblue;">Log
+                    In</button>
+                <br>
+                <br>
+                <p style="font-size: small; color: grey ; font-family: Cambria ;">OR</p>
+
+                <button mat-raised-button colour="primary" style="width: 100%; background-color: antiquewhite;"
+                    class="content-card"><span><img style="width: 20px;height: 20px;"
+                            src="assets/img/google_icon.png"></span>&nbsp;&nbsp;&nbsp;Sign In with Google</button>
+
+                <br>
+                <br>
+                <div>
+                    <button mat-raised-button colour="primary" style="width: 100%; background-color: antiquewhite;"
+                        class="content-card"><span><img style="width: 20px;height: 20px;"
+                                src="assets/img/facebook_icon.png"></span>&nbsp;&nbsp;&nbsp;Sign In with
+                        Facebook</button>
+                </div>
+                <br>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>
