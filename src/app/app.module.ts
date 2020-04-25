@@ -15,13 +15,14 @@ import { NavbarComponent } from './nav-bar/nav-bar.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AppMatModule } from './app-mat.module';
 import { EventModule } from './event/index';
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
         ArtistComponent,
+        HomeComponent
     ],
     imports: [
         BrowserModule,

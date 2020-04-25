@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { APPCONSTANTS } from './app.constants';
 
 
 @Component({
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    public logoPath = APPCONSTANTS.PATH + 'ArtHub.png';
     title = 'hub';
 }

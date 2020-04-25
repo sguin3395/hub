@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ArtistComponent } from './artist/artist.component';
 import { EventComponent } from './event/event.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [{
@@ -17,6 +18,9 @@ const routes: Routes = [{
 }, {
     path: 'events',
     component: EventComponent
+}, {
+    path: '',
+    component: HomeComponent
 }];
 
 @NgModule({
