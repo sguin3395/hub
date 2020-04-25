@@ -6,12 +6,14 @@
     z-index: 2;
     color: black;
     background-color: #f7e14d;
+    background-color: rgba($color: #f7e14d, $alpha: 0.5);
     height: 50px;
-    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-
+    box-shadow: 0 3px 5px -1px #888888, 0 6px 10px 0 #888888, 0 1px 18px 0 #888888;
+    // box-shadow: 5px 10px #888888;
     .nav-wrapper {
         margin-right: 10px;
         padding: 15px;
+        text-align: center;
         .nav-item {
             vertical-align: middle;
             cursor: pointer;

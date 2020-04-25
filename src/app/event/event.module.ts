@@ -4,6 +4,7 @@ import { EventComponent } from './event.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { AppMatModule } from '../app-mat.module';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from '../app.component';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
         CommonModule,
         AppMatModule
     ],
+    exports: [EventComponent],
     providers: []
 })
 

@@ -20,4 +20,8 @@ export class EventService {
         const URL = './assets/data/events.json';
         return this.http.get(URL);
     }
+    public getCountries = () => {
+        const URL = 'https://restcountries.eu/rest/v2/all';
+        return this.http.get(URL);
+    }
 }
