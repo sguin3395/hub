@@ -1,0 +1,68 @@
+{
+    "returnCode": 2000,
+    "message": "4 records successfully retrieved",
+    "data": {
+        "dataRecords": [
+            {
+                "host": "Billy",
+                "eventDate": "2020-04-28T00:18:53.341Z",
+                "eventName": "Stand Up",
+                "eventGenre": "Satire",
+                "eventArtist": "Billy",
+                "isPaidEvent": false,
+                "metadataId": "9540f8c2-84a8-46f1-b427-8e33673fbc53",
+                "alias": "EVENT-00004",
+                "id": "13aac1bf-327c-4a39-b054-b549dc6348df",
+                "ownerId": "478fa65c-f4a9-49a7-a1e4-63e4a14b0045",
+                "created": "2020-04-25T14:46:53.996216Z",
+                "lastModified": "2020-04-25T14:46:53.996216Z",
+                "readWrite": "readWrite"
+            },
+            {
+                "host": "Lata",
+                "eventDate": "2020-04-26T00:18:53.341Z",
+                "eventName": "Classical Music",
+                "eventGenre": "Indian",
+                "eventArtist": "Lata",
+                "isPaidEvent": true,
+                "ticketAmount": 1,
+                "metadataId": "9540f8c2-84a8-46f1-b427-8e33673fbc53",
+                "alias": "EVENT-00003",
+                "id": "5d198191-6618-4dac-be41-51607b9c5799",
+                "ownerId": "478fa65c-f4a9-49a7-a1e4-63e4a14b0045",
+                "created": "2020-04-25T14:42:21.000010Z",
+                "lastModified": "2020-04-25T14:42:21.000010Z",
+                "readWrite": "readWrite"
+            },
+            {
+                "host": "Erika",
+                "eventDate": "2020-04-26T00:18:53.341Z",
+                "eventName": "Opera Experience",
+                "eventGenre": "soubrette",
+                "eventArtist": "Erika",
+                "isPaidEvent": true,
+                "ticketAmount": 1,
+                "metadataId": "9540f8c2-84a8-46f1-b427-8e33673fbc53",
+                "alias": "EVENT-00002",
+                "id": "cf3f139e-3229-48a8-a39f-98ef8eed805a",
+                "ownerId": "478fa65c-f4a9-49a7-a1e4-63e4a14b0045",
+                "created": "2020-04-25T14:40:46.214135Z",
+                "lastModified": "2020-04-25T14:40:46.214135Z",
+                "readWrite": "readWrite"
+            },
+            {
+                "eventDate": "2020-04-26T00:18:53.341Z",
+                "eventName": "Test",
+                "eventGenre": "Soprano",
+                "metadataId": "9540f8c2-84a8-46f1-b427-8e33673fbc53",
+                "alias": "EVENT-00001",
+                "id": "e1a314c4-22c7-4b97-b115-1c6dc2e29fbf",
+                "ownerId": "478fa65c-f4a9-49a7-a1e4-63e4a14b0045",
+                "created": "2020-04-25T12:54:56.221275Z",
+                "lastModified": "2020-04-25T12:54:56.221275Z",
+                "readWrite": "readWrite"
+            }
+        ],
+        "relatedRecords": {}
+    }
+}

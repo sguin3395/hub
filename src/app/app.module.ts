@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 // Modules
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -28,7 +30,8 @@ import { EventModule } from './event/index';
         BrowserAnimationsModule,
         LoginModule,
         AppMatModule,
-        EventModule
+        EventModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]

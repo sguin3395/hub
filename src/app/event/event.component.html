@@ -1,13 +1,13 @@
 <div class="events-main">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 event-item" *ngFor="let item of events">
             <mat-card class="example-card">
                 <img mat-card-image src="../../assets/img/b1.jpg" alt="Photo of a Shiba Inu" style="height: 210px;">
                 <mat-card-content class="content-card">
-                    <h3>Artificial Intellisence and Machine Learning Submitt 2020</h3>
-                    <p>21st July 2020</p>
-                    <p>Nehru Stadium</p>
-                    <p>Rs.200</p>
+                    <h3>{{item.eventName}}</h3>
+                    <p>{{item.eventDate}}</p>
+                    <p>{{item.host}}</p>
+                    <p *ngIf='item.isPaid'>{{item.price}}</p>
                 </mat-card-content>
                 <mat-card-actions class="action-card">
                     <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" class="float-right">
