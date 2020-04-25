@@ -1,0 +1,22 @@
+.nav-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #ffffff;
+    background-color: rgb(63, 81, 181);
+    height: 50px;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+
+    .nav-wrapper {
+        margin-right: 10px;
+        padding: 15px;
+        .nav-item {
+            vertical-align: middle;
+            cursor: pointer;
+            margin-left: 30px;
+            color: white;
+        }
+    }
+}
