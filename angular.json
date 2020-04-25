@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "hub1"
+  "defaultProject": "hub1",
+  "cli": {
+    "analytics": false
+  }
 }
