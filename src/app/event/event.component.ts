@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { IEvents } from '../models';
 import { APPCONSTANTS } from '../app.constants';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-event',
@@ -11,7 +13,7 @@ import { APPCONSTANTS } from '../app.constants';
 export class EventComponent implements OnInit {
     public events: Array<IEvents> = [];
     public path: string = APPCONSTANTS.PATH + 'b1.jpg';
-    constructor(private eventService: EventService) { }
+    constructor(private eventService: EventService, public dialog: MatDialog, private route: ActivatedRoute, private router: Router) { }
 
     ngOnInit() {
         this.eventService.getEventsLocal().subscribe((eventResponse: any) => {
@@ -36,5 +38,7 @@ export class EventComponent implements OnInit {
         });
         return events;
     }
-
+    public openDialog(){
+        this.router.navigate(['/create-event']);
+    }
 }

@@ -1,1 +1,64 @@
-<p>create-event works!</p>
+<div class="create-event-main">
+    <div class="create-event-mat-wrapper">
+        <mat-card class="create-event-card">
+            <mat-card-content class="content-card">
+                <h1 style="color: darkslategrey;"> Create a new Event!</h1>
+                <p style="color: darkslategrey;">Please enter the following details to create an new event</p>
+
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Event Name</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type only characters</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Event Description</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type only characters</mat-hint>
+                </mat-form-field>
+                <br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Event date</mat-label>
+                    <input class='mat-input' matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle style="color: blueviolet;" matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker style="color: black;" #picker></mat-datepicker>
+                </mat-form-field><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Name of the artist</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type the name of the performing artist</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Host</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type the Host details</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Genre</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let genre of genres" [value]="genre.value">
+                            {{genre.viewValue}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-hint style="color: darkgray;">Click on "Genre" to discover options</mat-hint>
+                </mat-form-field>
+                <br>
+                <br>
+                <br>
+                <mat-radio-group [(ngModel)]="eventType" class="create-event-radio-group" aria-label="Select an option">
+                    <mat-radio-button value="1">Paid</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <mat-radio-button value="2">Free</mat-radio-button>
+                </mat-radio-group>
+                <br><br>
+                <div *ngIf="eventType==='1'">
+                    <mat-form-field style="width: 100%;" appearance="outline">
+                        <mat-label class="content-card">Price</mat-label>
+                        <input style="color: black;" class='mat-input' matInput>
+                        <mat-hint style="color: darkgray;">Type only numbers</mat-hint>
+                    </mat-form-field>
+                </div><br><br>
+                <button mat-raised-button colour="primary" style="width: 100%; background-color: cadetblue;">Register
+                    Event</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
