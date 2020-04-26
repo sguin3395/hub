@@ -7,6 +7,6 @@ import { APPCONSTANTS } from '../app.constants';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-    public imgPath: string = APPCONSTANTS.PATH + 'login.png';
+    //public imgPath: string = APPCONSTANTS.PATH + 'login.png';
     ngOnInit(){}
 }

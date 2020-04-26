@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
+import { ArtistRegistrationModule } from './registration/artist-registration.module';
+import { HomeModule } from './home/home.module';
 
 
 // Components
@@ -15,14 +17,14 @@ import { NavbarComponent } from './nav-bar/nav-bar.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AppMatModule } from './app-mat.module';
 import { EventModule } from './event/index';
-import { HomeComponent } from './home/home.component';
+
+
 
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
-        ArtistComponent,
-        HomeComponent
+        ArtistComponent
     ],
     imports: [
         BrowserModule,
@@ -32,7 +34,9 @@ import { HomeComponent } from './home/home.component';
         LoginModule,
         AppMatModule,
         EventModule,
-        HttpClientModule
+        HttpClientModule,
+        ArtistRegistrationModule,
+        HomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]

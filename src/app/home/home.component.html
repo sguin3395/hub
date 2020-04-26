@@ -1,23 +1,38 @@
 <div class="home-main">
     <!-- This is home -->
-    <div>
+    <div class="home-mat-wrapper">
         <mat-card class="example-card">
             <mat-card-content class="content-card">
                 <form class="example-form">
-                    <mat-form-field class="example-full-width">
-                        <input matInput placeholder="please enter country" aria-label="State" [matAutocomplete]="auto" style="color: gray;">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label class="content-card">Please enter country</mat-label>
+                        <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter country"
+                            aria-label="Country" [formControl]="myControl" [matAutocomplete]="auto">
                         <mat-autocomplete #auto="matAutocomplete">
                             <mat-option *ngFor="let country of countries" [value]="country">
                                 <span>{{country}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field>
+                    </mat-form-field> &nbsp; &nbsp; &nbsp; &nbsp;
+                    <!-- <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label class="content-card">Please enter State</mat-label>
+                        <input style="color: black;" class='mat-input' matInput placeholder="please enter state" aria-label="State"
+                            [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let country of states" [value]="states">
+                                <span>{{country}}</span>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field> --> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                    <button mat-raised-button colour="primary" style="width: 40%; background-color: cadetblue;">Set
+                        Location</button>
                 </form>
             </mat-card-content>
         </mat-card>
     </div>
     <div>
-        <app-artist></app-artist>
+
     </div>
-    <app-event></app-event>
+
 </div>
