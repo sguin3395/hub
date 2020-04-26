@@ -12,41 +12,41 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
     // public imgPath: string = APPCONSTANTS.PATH + 'login.png';
-    myControl = new FormControl();
+    countryControl = new FormControl();
+    genreControl = new FormControl();
+    artistControl = new FormControl();
+
     public countries: Array<string> = [];
-    public filteredOptions: Observable<string[]>;
+    public filteredCountries: Array<string>;
 
-    public genres = ['Comedy', 'Dance', 'Music', 'Storytelling'];
-    // public genres: Genre[] = [
-    //     { value: 'comedy-0', viewValue: 'Comedy' },
-    //     { value: 'dance-1', viewValue: 'Dance' },
-    //     { value: 'music-2', viewValue: 'Music' },
-    //     { value: 'storytelling-3', viewValue: 'Storytelling' }
-    // ];
+    public genres: Array<string>;
+    public filteredGenres: Array<string>;
 
-    public artists = [];
-    //     { value: '0', viewValue: 'Dwayne Johnson' },
-    //     { value: '1', viewValue: 'Kevin Hart' },
-    //     { value: '2', viewValue: 'Katy Perry' },
-    //     { value: '3', viewValue: 'Kenny Sebastian' }
-    // ];
+    public artists: Array<string>;
+    public filteredArtists: Array<string>;
 
     constructor(private eventService: EventService) { }
     ngOnInit() {
         this.eventService.getCountries().subscribe((countries: Array<any>) => {
             this.countries = countries.map(item => item.name);
-            console.log(this.countries);
         });
 
-        this.filteredOptions = this.myControl.valueChanges
-            .pipe(
-                startWith(''),
-                map(value => this._filter(value))
-            );
-    }
+        this.genres = ['Comedy', 'Dance', 'Music', 'Storytelling'];
+        this.artists = ['Dwayne Johnson', 'Kevin Hart', 'Katy Perry', 'Kenny Sebastian'];
+        
+        this.countryControl.valueChanges.subscribe((item) => {
+            console.log(item);
+            this.filteredCountries = this.countries.filter(country => country.toLowerCase().includes(item));
+        });
 
-    private _filter(value: string): string[] {
-        const filterValue = value.toLowerCase();
-        return this.countries.filter(country => country.toLowerCase().includes(filterValue));
+        this.genreControl.valueChanges.subscribe((item1) => {
+            console.log(item1);
+            this.filteredGenres = this.genres.filter(genre => genre.toLowerCase().includes(item1));
+        });
+
+        this.artistControl.valueChanges.subscribe((item2) => {
+            console.log(item2);
+            this.filteredArtists = this.artists.filter(artist => artist.toLowerCase().includes(item2));
+        });
     }
 }

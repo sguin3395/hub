@@ -10,6 +10,7 @@ import { LoginModule } from './login/login.module';
 import { ArtistRegistrationModule } from './registration/artist-registration.module';
 import { HomeModule } from './home/home.module';
 import { CreateEventModule } from './event/create-event/create-event.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // Components
@@ -19,6 +20,7 @@ import { ArtistComponent } from './artist/artist.component';
 import { AppMatModule } from './app-mat.module';
 import { EventModule, EventComponent } from './event/index';
 import { HomeComponent } from './home/home.component';
+
 
 
 
@@ -40,7 +42,9 @@ import { HomeComponent } from './home/home.component';
         EventModule,
         HttpClientModule,
         ArtistRegistrationModule,
-        CreateEventModule
+        CreateEventModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
