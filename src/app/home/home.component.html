@@ -1,11 +1,11 @@
 <div class="home-main">
     <!-- This is home -->
     <div class="home-mat-wrapper">
-        <mat-card class="example-card">
+        <mat-card class="example-card" style="max-width: 800px; margin-bottom: 20px; margin-left: 10%;">
             <mat-card-content class="content-card">
                 <form class="example-form">
                     <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label class="content-card">Type Country</mat-label>
+                        <mat-label class="content-card">Country</mat-label>
                         <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter country"
                             aria-label="Country" [matAutocomplete]="auto">
                         <mat-autocomplete #auto="matAutocomplete">
@@ -13,7 +13,7 @@
                                 <span>{{country}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+                    </mat-form-field> 
                     <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label class="content-card">Genre</mat-label>
                         <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter genre"
@@ -23,7 +23,7 @@
                                 <span>{{genre}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+                    </mat-form-field>
                     <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label class="content-card">Artist</mat-label>
                         <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter Artist"
@@ -33,14 +33,16 @@
                                 <span>{{artist}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-                    <button mat-raised-button colour="primary" style="width: 20%; background-color:goldenrod;">Search</button>
+                    </mat-form-field>
+                    <button mat-raised-button colour="primary" style="width: 20%; background-color: #bf2c27; margin-left: 5px;">Search</button>
                 </form>
             </mat-card-content>
         </mat-card>
     </div>
-    <div>
-
+    <div style="background-color: grey; width: 130%; margin-left: -15%; overflow-x: hidden;">
+        <app-artist></app-artist>
     </div>
-
+    <div>
+        <app-event></app-event>
+    </div>
 </div>
