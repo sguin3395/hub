@@ -1,1 +1,45 @@
-<p>artist-registration works!</p>
+<div class="registration-main">
+    <div class="registration-mat-wrapper">
+        <mat-card class="registration-card">
+            <mat-card-content class="content-card">
+                <h1 style="color: darkslategrey;"> Hello New User!</h1>
+                <p style="color: darkslategrey;">Please enter the following details to signup</p>
+                
+                <mat-form-field style="width: 49%;" appearance="outline">
+                    <mat-label class="content-card">First Name</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type only characters</mat-hint>
+                </mat-form-field>&nbsp;
+                <mat-form-field style="width: 49%;" appearance="outline">
+                    <mat-label class="content-card">Last Name</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Type only characters</mat-hint>
+                </mat-form-field>
+                <br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Email Address</mat-label>
+                    <input type="email" style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">example@domain.com</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Bio</mat-label>
+                    <input style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Fill in details about your work</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Password</mat-label>
+                    <input type="password" style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Must be atleast 6 characters</mat-hint>
+                </mat-form-field><br><br>
+                <mat-form-field style="width: 100%;" appearance="outline">
+                    <mat-label class="content-card">Confirm Password</mat-label>
+                    <input type="password" style="color: black;" class='mat-input' matInput>
+                    <mat-hint style="color: darkgray;">Should match the password typed in the previous field</mat-hint>
+                </mat-form-field>
+                <br>
+                <br>
+                <button mat-raised-button colour="primary" style="width: 100%; background-color: cadetblue;">Register and Save</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

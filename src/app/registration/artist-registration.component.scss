@@ -1,0 +1,38 @@
+.registration-main {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    top: 50px;
+    .registration-card {
+        border-radius: 6px;
+        box-shadow: 2px 4px 18px 0 rgba(0,0,0,.1);
+        background-color: white;
+    }
+    .content-card {
+        text-align: center;
+        color: darkgray;
+    }
+    .mat-input {
+        border-bottom: 1px solid darkgray;
+    }
+    .mat-input:focus {
+        border-bottom: none !important;
+    }
+    .action-card {
+        button {
+            margin-top: -35px;
+        }
+    }
+    .registration-mat-wrapper {
+        width:500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .mat-input {
+        border-bottom: 1px solid darkgray;
+    }
+    .mat-input:focus {
+        border-bottom: none !important;
+    }
+}

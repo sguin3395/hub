@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { ArtistComponent } from './artist/artist.component';
 import { EventComponent } from './event/event.component';
 import { HomeComponent } from './home/home.component';
+import { ArtistRegistrationComponent } from './registration/artist-registration.component';
 
 
 const routes: Routes = [{
@@ -11,7 +12,7 @@ const routes: Routes = [{
     component: LoginComponent
 }, {
     path: 'register',
-    component: LoginComponent
+    component: ArtistRegistrationComponent
 }, {
     path: 'artists',
     component: ArtistComponent
