@@ -5,6 +5,16 @@ import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import {map, startWith} from 'rxjs/operators';
 
+interface Genre {
+    value: string;
+    viewValue: string;
+}
+
+interface Artist {
+    value: string;
+    viewValue: string;
+}
+
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -15,19 +25,36 @@ export class HomeComponent implements OnInit {
     myControl = new FormControl();
     public countries: Array<string> = [];
     public filteredOptions: Observable<string[]>;
+
+    
+    genres: Genre[] = [
+        {value: 'comedy-0', viewValue: 'Comedy'},
+        {value: 'dance-1', viewValue: 'Dance'},
+        {value: 'music-2', viewValue: 'Music'},
+        {value: 'storytelling-3', viewValue: 'Storytelling'}
+      ];
+
+      artists: Artist[] = [
+        {value: '0', viewValue: 'Dwayne Johnson'},
+        {value: '1', viewValue: 'Kevin Hart'},
+        {value: '2', viewValue: 'Katy Perry'},
+        {value: '3', viewValue: 'Kenny Sebastian'}
+      ];
+
     constructor(private eventService: EventService){}
     ngOnInit(){
         this.eventService.getCountries().subscribe((countries: Array<any>) => {
             this.countries = countries.map(item => item.name);
             console.log(this.countries);
         });
+
         this.filteredOptions = this.myControl.valueChanges
         .pipe(
         startWith(''),
         map(value => this._filter(value))
       );
     }
-
+    
     private _filter(value: string): string[] {
         const filterValue = value.toLowerCase();
     

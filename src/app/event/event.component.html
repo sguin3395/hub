@@ -1,6 +1,13 @@
 <div class="events-main">
     <div class="row">
-        <div class="col-md-4 event-item" *ngFor="let item of events">
+        <div class="event-mat-wrapper">
+            <mat-card class="example-card">
+                <mat-card-content class="content-card">
+                    <button mat-raised-button colour="primary" style="width: 100%; background-color: cadetblue;" (click)="openDialog()">Register Event</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="event-mat-wrapper" *ngFor="let item of events">
             <mat-card class="example-card">
                 <img mat-card-image src={{path}} alt="Photo of a Shiba Inu" style="height: 210px;">
                 <mat-card-content class="content-card">
@@ -10,7 +17,8 @@
                     <p *ngIf='item.isPaid'>{{item.price}}</p>
                 </mat-card-content>
                 <mat-card-actions class="action-card">
-                    <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" class="float-right">
+                    <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon"
+                        class="float-right">
                         <mat-icon>favorite</mat-icon>
                     </button>
                 </mat-card-actions>

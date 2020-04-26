@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginModule } from './login/login.module';
 import { ArtistRegistrationModule } from './registration/artist-registration.module';
 import { HomeModule } from './home/home.module';
+import { CreateEventModule } from './event/create-event/create-event.module';
 
 
 // Components
@@ -36,7 +37,8 @@ import { EventModule } from './event/index';
         EventModule,
         HttpClientModule,
         ArtistRegistrationModule,
-        HomeModule
+        HomeModule,
+        CreateEventModule
     ],
     providers: [],
     bootstrap: [AppComponent]

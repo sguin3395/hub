@@ -5,28 +5,36 @@
             <mat-card-content class="content-card">
                 <form class="example-form">
                     <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label class="content-card">Please enter country</mat-label>
+                        <mat-label class="content-card">Type Country</mat-label>
                         <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter country"
-                            aria-label="Country" [formControl]="myControl" [matAutocomplete]="auto">
+                            aria-label="Country" [matAutocomplete]="auto">
                         <mat-autocomplete #auto="matAutocomplete">
                             <mat-option *ngFor="let country of countries" [value]="country">
                                 <span>{{country}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field> &nbsp; &nbsp; &nbsp; &nbsp;
-                    <!-- <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label class="content-card">Please enter State</mat-label>
-                        <input style="color: black;" class='mat-input' matInput placeholder="please enter state" aria-label="State"
-                            [matAutocomplete]="auto">
+                    </mat-form-field> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label class="content-card">Genre</mat-label>
+                        <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter genre"
+                            aria-label="Genre" [matAutocomplete]="auto">
                         <mat-autocomplete #auto="matAutocomplete">
-                            <mat-option *ngFor="let country of states" [value]="states">
-                                <span>{{country}}</span>
+                            <mat-option *ngFor="let genre of genres" [value]="genre">
+                                <span>{{genre}}</span>
                             </mat-option>
                         </mat-autocomplete>
-                    </mat-form-field> --> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-                    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                    <button mat-raised-button colour="primary" style="width: 40%; background-color: cadetblue;">Set
-                        Location</button>
+                    </mat-form-field>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label class="content-card">Artist</mat-label>
+                        <input type="text" style="color: black;" class='mat-input' matInput placeholder="please enter Artist"
+                            aria-label="Artist" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let artist of artists" [value]="artist">
+                                <span>{{artist}}</span>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                    <button mat-raised-button colour="primary" style="width: 20%; background-color:goldenrod;">Search</button>
                 </form>
             </mat-card-content>
         </mat-card>

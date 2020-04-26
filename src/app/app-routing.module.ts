@@ -5,6 +5,7 @@ import { ArtistComponent } from './artist/artist.component';
 import { EventComponent } from './event/event.component';
 import { HomeComponent } from './home/home.component';
 import { ArtistRegistrationComponent } from './registration/artist-registration.component';
+import { CreateEventComponent } from './event';
 
 
 const routes: Routes = [{
@@ -22,7 +23,11 @@ const routes: Routes = [{
 }, {
     path: '',
     component: HomeComponent
-}];
+}, {
+    path: 'create-event',
+    component: CreateEventComponent
+}
+];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

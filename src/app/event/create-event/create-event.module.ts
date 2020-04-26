@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './home.component';
-import { AppMatModule } from '../app-mat.module';
+import { CreateEventComponent } from './create-event.component';
+import { AppMatModule } from '../../app-mat.module';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
-        HomeComponent
+        CreateEventComponent
     ],
     imports: [
         FormsModule,
@@ -16,4 +16,4 @@ import { CommonModule } from '@angular/common';
     providers: []
 })
 
-export class HomeModule { }
+export class CreateEventModule { }
