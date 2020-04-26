@@ -17,7 +17,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './nav-bar/nav-bar.component';
 import { ArtistComponent } from './artist/artist.component';
 import { AppMatModule } from './app-mat.module';
-import { EventModule } from './event/index';
+import { EventModule, EventComponent } from './event/index';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -25,7 +26,9 @@ import { EventModule } from './event/index';
     declarations: [
         AppComponent,
         NavbarComponent,
-        ArtistComponent
+        ArtistComponent,
+        HomeComponent,
+        EventComponent
     ],
     imports: [
         BrowserModule,
@@ -37,7 +40,6 @@ import { EventModule } from './event/index';
         EventModule,
         HttpClientModule,
         ArtistRegistrationModule,
-        HomeModule,
         CreateEventModule
     ],
     providers: [],

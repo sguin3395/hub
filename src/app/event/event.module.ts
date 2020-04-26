@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 
-import { EventComponent } from './event.component'
+import { EventComponent } from './event.component';
 import { AppMatModule } from '../app-mat.module';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from '../app.component';
 
 @NgModule({
     declarations: [
-        EventComponent
+        // EventComponent
     ],
     imports: [
         CommonModule,
         AppMatModule
     ],
-    exports: [EventComponent],
+    // exports: [EventComponent],
     providers: []
 })
 

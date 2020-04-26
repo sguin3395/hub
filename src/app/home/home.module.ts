@@ -6,13 +6,14 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
-        HomeComponent
+        // HomeComponent
     ],
     imports: [
         FormsModule,
         AppMatModule,
         CommonModule
     ],
+    // exports: [HomeComponent],
     providers: []
 })
 
