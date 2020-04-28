@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod -base-href='https://guinrama.github.io/hub/'",
+    "build": "ng build --prod -base-href='https://sguin3395.github.io/hub/'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
